@@ -1,0 +1,71 @@
+<resources>
+    <!-- GLOBAL -->
+    <string name="app_name">OtterOfferings</string>
+    <string name="null_string"> </string>
+
+    <!-- REGISTER / LOGIN -->
+    <string name="main_welcomeText">Welcome to</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="create_account">Create Account</string>
+
+    <string name="go_to_register">Don\'t have an account? Sign up!</string>
+    <string name="go_to_login">Already have an account? Log in!</string>
+
+    <string name="empty_box">All fields must be filled!</string>
+    <string name="wrong_credentials">Incorrect credentials!</string>
+    <string name="user_already_exists">Email already registered!</string>
+    <string name="password_not_matching">Passwords do not match!</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <string name="deals">Deals</string>
+    <string name="home_offerings">Recommended Offerings</string>
+
+    <string name="clear_cart">Clear Cart</string>
+    <string name="add_more">Add More</string>
+    <string name="explore">Explore</string>
+    <string name="check_out">Check Out</string>
+
+    <string name="subtotal">Subtotal</string>
+    <string name="no_address_found">No address found...</string>
+
+    <string name="order_confirmed_header">Your order has been confirmed!</string>
+    <string name="order_id">Order ID</string>
+
+    <string name="order_confirmed_text">It should be ready by</string>
+    <string name="order_received">Order Received</string>
+    <string name="order_help">Contact</string>
+
+    <string name="contact_header"><u>Did something go wrong?</u></string>
+    <string name="contact1">Customer Care Line</string>
+    <string name="contact1_content">+60 11 1170 0403</string>
+    <string name="contact2">Email</string>
+    <string name="contact2_content">help@otterofferings.com</string>
+
+    <string name="profile_uneditable">For security reasons, contact customer support at
+    support@otterofferings.com to change email or password.</string>
+
+    <string name="pickup">Pickup</string>
+    <string name="delivery">Delivery</string>
+    <string name="manage">Change Address</string>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="place_order">Place Order</string>
+    <string name="choose_payment_method">Choose Payment Method</string>
+
+    <string name="cash">Cash</string>
+    <string name="cash_desc">Please present the cash upon receiving the food.</string>
+    <string name="TNG">Touch \'n Go</string>
+    <string name="tng_desc">Please make your payment to the following QR:</string>
+
+    <!-- MAPS -->
+    <string name="my_maps_api_key"></string>
+    <string name="address">Address</string>
+    <string name="go_back">Go Back</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+</resources>

@@ -1,0 +1,9 @@
+<!-- res/drawable/bg_search_view.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Transparent background for sides -->
+    <item android:drawable="@android:color/transparent" />
+
+    <!-- Drawable background for search box -->
+    <item android:drawable="@drawable/bg_search_box"
+        android:gravity="center_vertical|start" />
+</layer-list>

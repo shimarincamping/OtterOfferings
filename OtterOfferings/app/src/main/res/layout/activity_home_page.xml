@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/main_bg">
+
+        <LinearLayout
+            android:id="@+id/home_mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="75dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_accent"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/ic_dialog_map" />
+
+                <TextView
+                    android:id="@+id/home_addressBox"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="20dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:text="[No address found]"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/home_cartButton"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/main_accent"
+                    android:contentDescription="Cart Button"
+                    android:padding="6dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/cart" />
+
+                <EditText
+                    android:id="@+id/searchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="🔍  Search offerings..."
+                    android:imeOptions="actionSend"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/main_text"
+                    android:textColorHint="@color/hint"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/home_cartButton" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="20sp"
+                android:paddingBottom="0sp"
+                android:text="@string/deals"
+                android:textColor="@color/main_text"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/dealsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-18sp"
+                android:paddingLeft="20sp"
+                android:paddingRight="20sp"
+                app:srcCompat="@android:drawable/ic_menu_help" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="20sp"
+                android:paddingBottom="0sp"
+                android:text="@string/home_offerings"
+                android:textColor="@color/main_text"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!--
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_offeringsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/rounded_rectangle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/ic_menu_help" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:text="[ITEM NAME]"
+                    android:textColor="@color/main_text"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="30dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    app:srcCompat="@drawable/listicons" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="[STORE NAME]"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="[STORE LOCATION]"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="[ITEM PRICE]"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:layout_marginEnd="16dp"
+                    android:text="+"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            -->
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_alignBottom="@id/scrollview"
+        android:background="@color/main_accent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/discoverButton"
+            android:layout_width="70sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/main_accent"
+            android:contentDescription="Discover Button"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/discover" />
+
+        <ImageButton
+            android:id="@+id/shopButton"
+            android:layout_width="70sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/main_accent"
+            android:contentDescription="Shop Button"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/shop" />
+
+        <ImageButton
+            android:id="@+id/activityButton"
+            android:layout_width="70sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/main_accent"
+            android:contentDescription="activityButton"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/activity" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="70sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/main_accent"
+            android:contentDescription="Profile Button"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/profile" />
+    </LinearLayout>
+
+
+</RelativeLayout>
